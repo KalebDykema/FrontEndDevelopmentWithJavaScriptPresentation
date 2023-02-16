@@ -2,9 +2,9 @@
   "name": "frontenddevelopmentwithjavascriptpresentation",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "start": "vite",
-    "start-html-only": "npm start ./HTMLOnly",
     "build": "vite build",
     "preview": "vite preview"
   },
