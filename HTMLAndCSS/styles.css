@@ -1,0 +1,95 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --primaryColor: #f3f3f3;
+  --secondaryColor: #aeaeae;
+  --primaryBackgroundColor: #1e1e1e;
+  --secondaryBackgroundColor: #343434;
+  --primaryYellow: #e6c229;
+  --primaryOrange: #f17105;
+  --primaryRed: #d11149;
+  --primaryBlue: #6610f2;
+  --secondaryBlue: #1a8fe3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--primaryColor);
+  background-color: var(--primaryBackgroundColor);
+}
+
+a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.disabled {
+  text-decoration: none;
+  cursor: default;
+  color: var(--secondaryColor) !important;
+}
+
+header {
+  width: 100%;
+  outline: 0.25rem solid var(--primaryYellow);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+header nav{
+  display: flex;
+  gap: 0.5rem;
+}
+
+header h2 a {
+  transition: transform 0.25s ease-in-out, padding 0.3s ease-in-out;
+  color: var(--primaryYellow)
+}
+header h2 a:hover {
+  padding-left: 1rem;
+  text-decoration: none;
+}
+
+header nav a {
+  transition: color 0.25s ease-in-out, padding 0.3s ease-in-out;
+}
+header nav a:hover:not(.disabled) {
+  color: var(--primaryOrange);
+  padding: 0rem 0.25rem;
+}
+
+#colorBars {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.colorBar {
+  height: 4.08rem;
+  width: 4rem;
+  transition: width 0.25s ease-out;
+}
+.colorBar:hover {
+  width: 6rem;
+}
+.colorBar:first-child {
+  background-color: var(--primaryYellow);
+}
+.colorBar:nth-child(2) {
+  background-color: var(--primaryOrange);
+}
+.colorBar:nth-child(3) {
+  background-color: var(--primaryRed);
+}
+.colorBar:nth-child(4) {
+  background-color: var(--primaryBlue);
+}
