@@ -1,0 +1,24 @@
+{
+  "name": "frontenddevelopmentwithjavascriptpresentation",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite",
+    "start-html-only": "npm start ./HTMLOnly",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KalebDykema/FrontEndDevelopmentWithJavaScriptPresentation.git"
+  },
+  "author": "Kaleb Dykema",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KalebDykema/FrontEndDevelopmentWithJavaScriptPresentation/issues"
+  },
+  "homepage": "https://github.com/KalebDykema/FrontEndDevelopmentWithJavaScriptPresentation#readme",
+  "devDependencies": {
+    "vite": "^4.1.1"
+  }
+}
