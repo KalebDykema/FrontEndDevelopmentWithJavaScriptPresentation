@@ -1,0 +1,38 @@
+$primaryPink: #ff59c4;
+$secondaryPink: #fff1fa;
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $secondaryPink;
+
+  nav {
+    margin: auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 0;
+    column-gap: 3rem;
+    overflow: visible;
+    height: 100vh;
+    
+    a {
+      font-size: 3rem;
+      text-decoration: none;
+      color: $primaryPink;
+      position: relative;
+      transition: color 0.5s ease-in-out;
+  
+      &:hover {
+        color: darken($primaryPink, 30%)
+      }
+    }
+  }
+}
