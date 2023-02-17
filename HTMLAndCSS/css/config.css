@@ -38,6 +38,15 @@ input {
   margin-bottom: 1rem;
 }
 
+input[type='submit'] {
+  cursor: pointer;
+  transition: color 0.75s ease-in-out, background-color 0.75s ease-in-out;
+}
+input[type='submit']:hover {
+  color: var(--primaryColor);
+  background-color: var(--primaryBlue);
+}
+
 form {
   display: flex;
   flex-direction: column;
