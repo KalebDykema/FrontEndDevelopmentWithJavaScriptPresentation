@@ -1,0 +1,14 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --maxWidth: 1200px;
+  --primaryColor: #f3f3f3;
+  --secondaryColor: #aeaeae;
+  --primaryBackgroundColor: #1e1e1e;
+  --secondaryBackgroundColor: #343434;
+  --tertiaryBackgroundColor: #0f0f0f;
+  --primaryYellow: #e6c229;
+  --primaryOrange: #f17105;
+  --primaryRed: #d11149;
+  --primaryBlue: #6610f2;
+  --secondaryBlue: #1a8fe3;
+}

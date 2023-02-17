@@ -1,40 +1,3 @@
-:root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --primaryColor: #f3f3f3;
-  --secondaryColor: #aeaeae;
-  --primaryBackgroundColor: #1e1e1e;
-  --secondaryBackgroundColor: #343434;
-  --primaryYellow: #e6c229;
-  --primaryOrange: #f17105;
-  --primaryRed: #d11149;
-  --primaryBlue: #6610f2;
-  --secondaryBlue: #1a8fe3;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  color: var(--primaryColor);
-  background-color: var(--primaryBackgroundColor);
-}
-
-a {
-  color: var(--primaryColor);
-  text-decoration: none;
-  font-weight: bold;
-}
-a:hover {
-  text-decoration: underline;
-}
-a.disabled {
-  text-decoration: none;
-  cursor: default;
-  color: var(--secondaryColor) !important;
-}
 
 header {
   width: 100%;
@@ -42,7 +5,9 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 header nav{
@@ -74,7 +39,8 @@ header nav a:hover:not(.disabled) {
   right: 0;
 }
 .colorBar {
-  height: 4.08rem;
+  /* height: 4.08rem; */
+  height: 100vh;
   width: 4rem;
   transition: width 0.25s ease-out;
 }
