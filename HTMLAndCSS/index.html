@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/config.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/layouts.css">
   <link rel="stylesheet" href="css/commonStyles.css">
   <title>HTML and CSS | Home</title>
 </head>
@@ -26,38 +27,32 @@
       <div class="colorBar"></div>
     </div>
   </header>
-  <br>
 
-  <div class="container">
+  <div id="home" class="container">
     <main>
-      <h3>This is my site!</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo voluptatem voluptas possimus. Eum laudantium,
-        magnam voluptas veniam inventore aperiam. Neque excepturi iure odio praesentium nulla incidunt modi quam
-        repellendus doloribus.</p>
+      <section>
+        <h3>This is my site!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo voluptatem voluptas possimus. Eum laudantium, magnam voluptas veniam inventore aperiam. Neque excepturi iure odio praesentium nulla incidunt modi quam repellendus doloribus.</p>
+      </section>
+      
+      <section>
+        <h3>Section Explaining Something</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque at ut harum vitae, alias sapiente aut reiciendis iure impedit repellendus placeat dolore veniam ea illum deserunt dignissimos ad totam.</p>
+      </section>
     </main>
-    <br>
-
-    <section>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque at ut harum vitae, alias sapiente aut
-        reiciendis iure impedit repellendus placeat dolore veniam ea illum deserunt dignissimos ad totam.</p>
-    </section>
-    <br>
-
+      
     <aside>
       <h3>Sign Up For Our Newsletter</h3>
       <form action="#">
         <label for="name">Name:</label>
-        <br>
         <input type="text" id="name" name="name">
-        <br>
-        <label for="email">email</label>
-        <br>
+
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email">
-        <br>
-        <input type="submit" value="Submit">
+        
+        <input type="submit" value="Submit" class="submitBtn">
       </form>
     </aside>
-    <br>
 
   </div>
 

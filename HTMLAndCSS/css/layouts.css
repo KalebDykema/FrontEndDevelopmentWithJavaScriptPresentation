@@ -1,0 +1,10 @@
+#home {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#home main {
+  flex: 2;
+  min-width: 30rem;
+}
