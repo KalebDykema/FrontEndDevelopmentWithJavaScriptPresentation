@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/KalebDykema/FrontEndDevelopmentWithJavaScriptPresentation#readme",
   "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "husky": "^8.0.3",
@@ -31,5 +32,8 @@
   "lint-staged": {
     "*.{js,cjs}": "eslint --cache --fix",
     "*.{html,js,cjs,css,scss,md}": "prettier --write"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
   }
 }

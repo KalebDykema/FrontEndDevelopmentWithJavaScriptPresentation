@@ -1,0 +1,10 @@
+.container {
+  max-width: $maxWidth;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.submitBtn {
+  background-color: $primaryYellow;
+  font-weight: bold;
+}
