@@ -10,8 +10,8 @@
 }
 
 body {
-  color: var(--primaryColor);
-  background-color: var(--primaryBackgroundColor);
+  color: $primaryColor;
+  background-color: $primaryBackgroundColor;
 }
 
 main,
@@ -21,7 +21,7 @@ aside {
 }
 
 a {
-  color: var(--primaryColor);
+  color: $primaryColor;
   text-decoration: none;
   font-weight: bold;
 }
@@ -31,7 +31,7 @@ a:hover {
 a.disabled {
   text-decoration: none;
   cursor: default;
-  color: var(--secondaryColor) !important;
+  color: $secondaryColor !important;
 }
 
 h3 {
@@ -50,8 +50,8 @@ input[type='submit'] {
   transition: color 0.75s ease-in-out, background-color 0.75s ease-in-out;
 }
 input[type='submit']:hover {
-  color: var(--primaryColor);
-  background-color: var(--primaryBlue);
+  color: $primaryColor;
+  background-color: $primaryBlue;
 }
 
 form {
@@ -62,7 +62,7 @@ form {
 
 footer {
   width: 100%;
-  background-color: var(--primaryOrange);
+  background-color: $primaryOrange;
   display: flex;
   justify-content: center;
   align-items: center;
