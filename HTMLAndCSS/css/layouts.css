@@ -9,7 +9,7 @@
   min-width: 30rem;
 }
 
-#about main > div {
+#about main div {
   display: flex;
   align-items: center;
   justify-content: space-between;
