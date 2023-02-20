@@ -9,7 +9,9 @@ body {
   background-color: var(--primaryBackgroundColor);
 }
 
-main, section, aside {
+main,
+section,
+aside {
   margin-bottom: 4rem;
 }
 

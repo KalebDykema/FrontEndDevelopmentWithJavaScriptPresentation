@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/config.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/layouts.css" />
+    <link rel="stylesheet" href="css/commonStyles.css" />
+    <title>HTML and CSS | Home</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/config.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/layouts.css">
-  <link rel="stylesheet" href="css/commonStyles.css">
-  <title>HTML and CSS | Home</title>
-</head>
+  <body>
+    <header>
+      <h2>
+        <a href="index.html">HTML and CSS Site</a>
+      </h2>
+      <nav>
+        <a class="disabled">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div id="colorBars">
+        <div class="colorBar"></div>
+        <div class="colorBar"></div>
+        <div class="colorBar"></div>
+        <div class="colorBar"></div>
+      </div>
+    </header>
 
-<body>
-  <header>
-    <h2>
-      <a href="index.html">HTML and CSS Site</a>
-    </h2>
-    <nav>
-      <a class="disabled">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div id="colorBars">
-      <div class="colorBar"></div>
-      <div class="colorBar"></div>
-      <div class="colorBar"></div>
-      <div class="colorBar"></div>
+    <div id="home" class="container">
+      <main>
+        <section>
+          <h3>This is my site!</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            voluptatem voluptas possimus. Eum laudantium, magnam voluptas veniam
+            inventore aperiam. Neque excepturi iure odio praesentium nulla
+            incidunt modi quam repellendus doloribus.
+          </p>
+        </section>
+
+        <section>
+          <h3>Section Explaining Something</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            cumque at ut harum vitae, alias sapiente aut reiciendis iure impedit
+            repellendus placeat dolore veniam ea illum deserunt dignissimos ad
+            totam.
+          </p>
+        </section>
+      </main>
+
+      <aside>
+        <h3>Sign Up For Our Newsletter</h3>
+        <form action="#">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+
+          <input type="submit" value="Submit" class="submitBtn" />
+        </form>
+      </aside>
     </div>
-  </header>
 
-  <div id="home" class="container">
-    <main>
-      <section>
-        <h3>This is my site!</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo voluptatem voluptas possimus. Eum laudantium, magnam voluptas veniam inventore aperiam. Neque excepturi iure odio praesentium nulla incidunt modi quam repellendus doloribus.</p>
-      </section>
-      
-      <section>
-        <h3>Section Explaining Something</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque at ut harum vitae, alias sapiente aut reiciendis iure impedit repellendus placeat dolore veniam ea illum deserunt dignissimos ad totam.</p>
-      </section>
-    </main>
-      
-    <aside>
-      <h3>Sign Up For Our Newsletter</h3>
-      <form action="#">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        
-        <input type="submit" value="Submit" class="submitBtn">
-      </form>
-    </aside>
-
-  </div>
-
-  <footer>
-    Copyright&#169; 2023 Kaleb Dykema
-  </footer>
-</body>
-
+    <footer>Copyright&#169; 2023 Kaleb Dykema</footer>
+  </body>
 </html>

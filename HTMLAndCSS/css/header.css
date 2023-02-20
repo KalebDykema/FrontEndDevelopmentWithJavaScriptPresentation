@@ -9,14 +9,14 @@ header {
   overflow: hidden;
 }
 
-header nav{
+header nav {
   display: flex;
   gap: 0.5rem;
 }
 
 header h2 a {
   transition: transform 0.25s ease-in-out, padding 0.3s ease-in-out;
-  color: var(--primaryYellow)
+  color: var(--primaryYellow);
 }
 header h2 a:hover {
   padding-left: 1rem;

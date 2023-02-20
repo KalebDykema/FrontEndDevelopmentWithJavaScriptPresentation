@@ -22,16 +22,16 @@ body {
     column-gap: 3rem;
     overflow: visible;
     height: 100vh;
-    
+
     a {
       font-size: 3rem;
       text-decoration: none;
       color: $primaryPink;
       position: relative;
       transition: color 0.5s ease-in-out;
-  
+
       &:hover {
-        color: darken($primaryPink, 30%)
+        color: darken($primaryPink, 30%);
       }
     }
   }
