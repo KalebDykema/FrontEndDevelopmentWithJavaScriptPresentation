@@ -11,5 +11,8 @@
     <li>
       <router-link :to="{ name: 'contact' }">Contact</router-link>
     </li>
+    <li>
+      <router-link to="/contactesdafs">Contact</router-link>
+    </li>
   </ul>
 </template>
