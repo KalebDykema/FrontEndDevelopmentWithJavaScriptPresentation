@@ -4,7 +4,10 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start-html": "vite ./HTML",
+    "start-css": "vite ./CSS",
+    "start-sass": "vite ./SASS",
+    "start-vue": "vite ./Vue",
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install"
