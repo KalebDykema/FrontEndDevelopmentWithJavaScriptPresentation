@@ -4,12 +4,13 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start-html": "vite ./HTML",
-    "start-css": "vite ./CSS",
-    "start-sass": "vite ./SASS",
-    "start-vue": "vite ./Vue",
-    "build": "vite build",
-    "preview": "vite preview",
+    "vite": "vite -c ./vite.config.js",
+    "start-html": "npm run vite ./HTML",
+    "start-css": "npm run vite ./CSS",
+    "start-sass": "npm run vite ./SASS",
+    "start-vue": "npm run vite ./Vue",
+    "build": "npm run vite build",
+    "preview": "npm run vite preview",
     "prepare": "husky install"
   },
   "repository": {
