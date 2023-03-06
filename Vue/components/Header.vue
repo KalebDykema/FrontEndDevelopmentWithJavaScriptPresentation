@@ -3,7 +3,7 @@
     <h2 :class="$style.siteTitle">
       <router-link :to="{ name: 'home' }">Vue Site</router-link>
     </h2>
-    <nav :class="links">
+    <nav :class="$style.links">
       <router-link :to="{ name: 'home' }">Home</router-link>
       <router-link :to="{ name: 'about' }">About</router-link>
       <router-link :to="{ name: 'contact' }">Contact</router-link>
@@ -17,7 +17,7 @@
   </header>
 </template>
 
-<style lang="scss" type="module">
+<style lang="scss" module>
 @import '../scss/variables';
 
 .headerStyles {
