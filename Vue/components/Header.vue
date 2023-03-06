@@ -1,3 +1,18 @@
+<script>
+export default {
+  name: 'Header',
+  created() {
+    console.log(this.isCurrentPage('home'))
+  },
+  methods: {
+    isCurrentPage(val) {
+      console.log(this.$route, this.$route.name, val, this.$route.name === val)
+      return this.$route.name === val
+    }
+  }
+}
+</script>
+
 <template>
   <header :class="$style.headerStyles">
     <h2 :class="$style.siteTitle">
