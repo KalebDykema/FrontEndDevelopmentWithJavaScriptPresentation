@@ -4,15 +4,27 @@ form.addEventListener('submit', (e) => {
   e.preventDefault()
 
   const data = new FormData(form)
-  const name = data.get('name')
-  const email = data.get('email')
+  const entries = [...data.entries()]
 
-  if (!name || !email) {
-    displayError()
-    return
+  // This checks if we're missing any values and displays errors for each
+  let valid = true
+  entries.forEach((entry) => {
+    if (!entry[1]) {
+      valid = false
+      displayError(entry[0])
+    }
+  })
+
+  if (valid) {
+    console.log('submit')
   }
 })
 
-const displayError = () => {
-  console.log('show error')
+const displayError = (section) => {
+  const getFormElement = (query) => {
+    return form.querySelector(`#${section}Section ${query}`)
+  }
+
+  getFormElement('input').classList.add('error')
+  getFormElement('p').classList.remove('invisible')
 }
