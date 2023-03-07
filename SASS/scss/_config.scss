@@ -24,14 +24,16 @@ a {
   color: $primaryColor;
   text-decoration: none;
   font-weight: bold;
-}
-a:hover {
-  text-decoration: underline;
-}
-a.disabled {
-  text-decoration: none;
-  cursor: default;
-  color: $secondaryColor !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.disabled {
+    text-decoration: none;
+    cursor: default;
+    color: $secondaryColor !important;
+  }
 }
 
 h3 {
@@ -43,15 +45,16 @@ input {
   border-radius: 0.5rem;
   padding: 1rem 0.5rem;
   margin-bottom: 1rem;
-}
 
-input[type='submit'] {
-  cursor: pointer;
-  transition: color 0.75s ease-in-out, background-color 0.75s ease-in-out;
-}
-input[type='submit']:hover {
-  color: $primaryColor;
-  background-color: $primaryBlue;
+  &[type='submit'] {
+    cursor: pointer;
+    transition: color 0.75s ease-in-out, background-color 0.75s ease-in-out;
+
+    &:hover {
+      color: $primaryColor;
+      background-color: $primaryBlue;
+    }
+  }
 }
 
 form {
