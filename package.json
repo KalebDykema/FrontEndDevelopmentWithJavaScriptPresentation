@@ -8,6 +8,7 @@
     "start-html": "npm run vite ./HTML",
     "start-css": "npm run vite ./CSS",
     "start-sass": "npm run vite ./SASS",
+    "start-js": "npm run vite ./JavaScript",
     "start-vue": "npm run vite ./Vue",
     "build": "npm run vite build",
     "preview": "npm run vite preview",
