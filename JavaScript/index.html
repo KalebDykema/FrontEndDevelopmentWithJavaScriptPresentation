@@ -48,14 +48,22 @@
 
       <aside>
         <h3>Sign Up For Our Newsletter</h3>
-        <form action="#">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" />
+        <form action="#" id="newsletterForm">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <span class="error invisible">Name is required</span>
+          </div>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" />
+          <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" />
+            <span class="error invisible">Email is required</span>
+          </div>
 
-          <input type="submit" value="Submit" class="submitBtn" />
+          <div>
+            <input type="submit" value="Submit" />
+          </div>
         </form>
       </aside>
     </div>

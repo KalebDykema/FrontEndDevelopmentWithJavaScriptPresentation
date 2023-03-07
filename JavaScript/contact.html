@@ -32,12 +32,22 @@
 
       <aside>
         <h3>Sign Up For Our Newsletter</h3>
-        <form action="#">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" />
-          <label for="email">email</label>
-          <input type="email" id="email" name="email" />
-          <input type="submit" value="Submit" />
+        <form action="#" id="newsletterForm">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <span class="error invisible">Name is required</span>
+          </div>
+
+          <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" />
+            <span class="error invisible">Email is required</span>
+          </div>
+
+          <div>
+            <input type="submit" value="Submit" />
+          </div>
         </form>
       </aside>
     </div>
