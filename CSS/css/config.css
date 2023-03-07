@@ -31,7 +31,7 @@ a:hover {
 a.disabled {
   text-decoration: none;
   cursor: default;
-  color: var(--secondaryColor) !important;
+  color: var(--secondaryColor);
 }
 
 h3 {

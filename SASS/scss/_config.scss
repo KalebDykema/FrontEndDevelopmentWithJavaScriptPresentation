@@ -32,7 +32,7 @@ a {
   &.disabled {
     text-decoration: none;
     cursor: default;
-    color: $secondaryColor !important;
+    color: $secondaryColor;
   }
 }
 
