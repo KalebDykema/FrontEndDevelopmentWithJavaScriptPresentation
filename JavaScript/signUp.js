@@ -1,6 +1,6 @@
 // DOM Elements
-const form = document.getElementById('newsletterForm')
-const dialogContainer = document.getElementById('dialog-container')
+const form = document.querySelector('form')
+const dialogContainer = document.querySelector('.dialog-container')
 const dialog = dialogContainer.querySelector('dialog')
 const dialogCloseBtn = dialog.querySelector('button')
 
@@ -58,7 +58,7 @@ const toggleDialog = (value, data) => {
 
 const toggleError = (section, value) => {
   const getFormElement = (query) => {
-    return form.querySelector(`#${section}Section ${query}`)
+    return form.querySelector(`.${section}Section ${query}`)
   }
 
   getFormElement('input').classList.toggle('error', value)
