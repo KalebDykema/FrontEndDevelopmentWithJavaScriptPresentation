@@ -27,8 +27,11 @@ const submitForm = (e) => {
   }
 }
 
-const closeDialog = () => {
-  toggleDialog(false)
+const closeDialog = (e) => {
+  // If we don't have a key defined, then this was called by clicking on the X button. Otherwise, it was called on a keydown handler, and we need to make sure it's the escape key
+  if (!e.key || e.key === 'Escape') {
+    toggleDialog(false)
+  }
 }
 
 // Functions used by handlers
@@ -55,5 +58,6 @@ const toggleError = (section, value) => {
 }
 
 // Set up event listeners
-dialogCloseBtn.addEventListener('click', closeDialog)
 form.addEventListener('submit', submitForm)
+dialogCloseBtn.addEventListener('click', closeDialog)
+document.addEventListener('keydown', closeDialog)
