@@ -1,6 +1,6 @@
 // DOM Elements
 const form = document.getElementById('newsletterForm')
-const dialog = document.querySelector('dialog')
+const dialog = document.getElementById('dialog-container')
 const dialogCloseBtn = dialog.querySelector('button')
 
 // Set up event handlers
@@ -33,21 +33,16 @@ const closeDialog = () => {
 
 // Functions used by handlers
 const toggleDialog = (value, data) => {
-  const attribute = 'open'
-
-  // Close the dialog
-  if (!value) {
-    dialog.removeAttribute(attribute)
-    return
+  // Toggle
+  dialog.classList.toggle('invisible', !value)
+  if (value) {
+    // Open the dialog
+    dialog.querySelector('p').innerText = `Thank you ${data.get(
+      'name'
+    )} for signing up! We'll email you newsletters and updates at ${data.get(
+      'email'
+    )}.`
   }
-
-  // Open the dialog
-  dialog.querySelector('p').innerText = `Thank you ${data.get(
-    'name'
-  )} for signing up! We'll email you newsletters and updates at ${data.get(
-    'email'
-  )}.`
-  dialog.setAttribute(attribute, value)
 }
 
 const toggleError = (section, value) => {
