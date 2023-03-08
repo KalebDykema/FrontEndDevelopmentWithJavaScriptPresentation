@@ -34,7 +34,6 @@ const stopPropagation = (e) => {
 }
 
 const closeDialog = (e) => {
-  console.log(e)
   e.stopPropagation()
 
   // If we don't have a key defined, then this was called by clicking on the X button. Otherwise, it was called on a keydown handler, and we need to make sure it's the escape key
