@@ -1,6 +1,7 @@
 // DOM Elements
 const form = document.getElementById('newsletterForm')
-const dialog = document.getElementById('dialog-container')
+const dialogContainer = document.getElementById('dialog-container')
+const dialog = dialogContainer.querySelector('dialog')
 const dialogCloseBtn = dialog.querySelector('button')
 
 // Set up event handlers
@@ -27,7 +28,15 @@ const submitForm = (e) => {
   }
 }
 
+// This exists to stop prevent the "dialogContainer" event listener being triggered by someone that clicking on the dialog itself
+const stopPropagation = (e) => {
+  e.stopPropagation()
+}
+
 const closeDialog = (e) => {
+  console.log(e)
+  e.stopPropagation()
+
   // If we don't have a key defined, then this was called by clicking on the X button. Otherwise, it was called on a keydown handler, and we need to make sure it's the escape key
   if (!e.key || e.key === 'Escape') {
     toggleDialog(false)
@@ -37,10 +46,10 @@ const closeDialog = (e) => {
 // Functions used by handlers
 const toggleDialog = (value, data) => {
   // Toggle
-  dialog.classList.toggle('invisible', !value)
+  dialogContainer.classList.toggle('invisible', !value)
   if (value) {
     // Open the dialog
-    dialog.querySelector('p').innerText = `Thank you ${data.get(
+    dialogContainer.querySelector('p').innerText = `Thank you ${data.get(
       'name'
     )} for signing up! We'll email you newsletters and updates at ${data.get(
       'email'
@@ -59,5 +68,7 @@ const toggleError = (section, value) => {
 
 // Set up event listeners
 form.addEventListener('submit', submitForm)
+dialog.addEventListener('click', stopPropagation)
 dialogCloseBtn.addEventListener('click', closeDialog)
+dialogContainer.addEventListener('click', closeDialog)
 document.addEventListener('keydown', closeDialog)
