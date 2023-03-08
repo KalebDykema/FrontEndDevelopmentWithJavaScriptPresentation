@@ -1,13 +1,12 @@
 <script>
 export default {
   name: 'Header',
-  created() {
-    console.log(this.isCurrentPage('home'))
-  },
   methods: {
     isCurrentPage(val) {
-      console.log(this.$route, this.$route.name, val, this.$route.name === val)
-      return this.$route.name === val
+      // If $route.name is undefined, then we're on the home page
+      return this.$route.name === val || !this.$route.name && val === 'home'
+        ? 'disabled'
+        : ''
     }
   }
 }
@@ -19,9 +18,9 @@ export default {
       <router-link :to="{ name: 'home' }">Vue Site</router-link>
     </h2>
     <nav :class="$style.links">
-      <router-link :to="{ name: 'home' }">Home</router-link>
-      <router-link :to="{ name: 'about' }">About</router-link>
-      <router-link :to="{ name: 'contact' }">Contact</router-link>
+      <router-link :to="{ name: 'home' }" :class="isCurrentPage('home')">Home</router-link>
+      <router-link :to="{ name: 'about' }" :class="isCurrentPage('about')">About</router-link>
+      <router-link :to="{ name: 'contact' }" :class="isCurrentPage('contact')">Contact</router-link>
     </nav>
     <div :class="$style.colorBars">
       <div></div>
@@ -59,7 +58,7 @@ export default {
     }
   }
 
-  siteTitle:global(a) {
+  .siteTitle:global(a) {
     transition: transform 0.25s ease-in-out, padding 0.3s ease-in-out;
     color: $primaryYellow;
 
