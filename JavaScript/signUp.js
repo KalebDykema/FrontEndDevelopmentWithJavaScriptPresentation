@@ -1,8 +1,10 @@
+// DOM Elements
 const form = document.getElementById('newsletterForm')
 const dialog = document.querySelector('dialog')
-// const dialogCloseBtn = dialog.querySelector('btn')
+const dialogCloseBtn = dialog.querySelector('button')
 
-form.addEventListener('submit', (e) => {
+// Set up event handlers
+const submitForm = (e) => {
   e.preventDefault()
 
   const data = new FormData(form)
@@ -23,10 +25,13 @@ form.addEventListener('submit', (e) => {
   if (valid) {
     toggleDialog(true, data)
   }
-})
+}
 
-// dialogCloseBtn.addEventListener('click', () => toggleDialog(false))
+const closeDialog = () => {
+  toggleDialog(false)
+}
 
+// Functions used by handlers
 const toggleDialog = (value, data) => {
   const attribute = 'open'
 
@@ -53,3 +58,7 @@ const toggleError = (section, value) => {
   getFormElement('input').classList.toggle('error', value)
   getFormElement('p').classList.toggle('invisible', !value)
 }
+
+// Set up event listeners
+dialogCloseBtn.addEventListener('click', closeDialog)
+form.addEventListener('submit', submitForm)
