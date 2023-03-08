@@ -6,12 +6,15 @@ form.addEventListener('submit', (e) => {
   const data = new FormData(form)
   const entries = [...data.entries()]
 
-  // This checks if we're missing any values and displays errors for each
   let valid = true
   entries.forEach((entry) => {
+    // Reset errors
+    toggleError(entry[0], false)
+
+    // If we're missing any values, display the error and mark the form as invalid
     if (!entry[1]) {
       valid = false
-      displayError(entry[0])
+      toggleError(entry[0], true)
     }
   })
 
@@ -20,11 +23,11 @@ form.addEventListener('submit', (e) => {
   }
 })
 
-const displayError = (section) => {
+const toggleError = (section, value) => {
   const getFormElement = (query) => {
     return form.querySelector(`#${section}Section ${query}`)
   }
 
-  getFormElement('input').classList.add('error')
-  getFormElement('p').classList.remove('invisible')
+  getFormElement('input').classList.toggle('error', value)
+  getFormElement('p').classList.toggle('invisible', !value)
 }
