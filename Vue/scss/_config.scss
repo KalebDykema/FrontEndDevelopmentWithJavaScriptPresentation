@@ -75,18 +75,6 @@ form {
   }
 }
 
-footer {
-  width: 100%;
-  background-color: $primaryOrange;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  position: fixed;
-  bottom: 0;
-  font-weight: bold;
-}
-
 .dialog-container {
   background-color: rgba($primaryBackgroundColor, 0.5);
   height: 100vh;
