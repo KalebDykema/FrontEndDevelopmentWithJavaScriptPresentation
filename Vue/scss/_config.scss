@@ -64,17 +64,6 @@ input {
   }
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  div {
-    @extend form;
-    gap: 1rem;
-  }
-}
-
 .dialog-container {
   background-color: rgba($primaryBackgroundColor, 0.5);
   height: 100vh;
