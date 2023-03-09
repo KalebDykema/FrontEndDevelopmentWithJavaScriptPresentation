@@ -68,15 +68,17 @@ export default {
     }
   }
 
-  .siteTitle:global(a) {
-    transition: transform 0.25s ease-in-out, padding 0.3s ease-in-out;
-    color: $primaryYellow;
+  .siteTitle {
+    :global(a) {
+      transition: transform 0.25s ease-in-out, padding 0.3s ease-in-out;
+      color: $primaryYellow;
 
-    &:hover {
-      padding-left: 1rem;
-      text-decoration: none;
+      &:hover {
+        padding-left: 1rem;
+        text-decoration: none;
+      }
     }
-  }
+}
 
   .colorBars {
     display: flex;
