@@ -1,6 +1,11 @@
 <script>
+import Newsletter from '../components/Newsletter.vue'
+
 export default {
   name: 'About',
+  components: {
+    Newsletter,
+  },
 }
 </script>
 
@@ -12,7 +17,7 @@ export default {
       <a href="mailto:gordonfreeman@valve.com">gordonfreeman@valve.com</a>
     </main>
 
-    <h1>Newsletter</h1>
+    <Newsletter />
   </div>
 </template>
 

@@ -1,6 +1,11 @@
 <script>
+import Newsletter from '../components/Newsletter.vue'
+
 export default {
   name: 'Home',
+  components: {
+    Newsletter,
+  },
 }
 </script>
 
@@ -20,15 +25,15 @@ export default {
       <section>
         <h3>Section Explaining Something</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-          cumque at ut harum vitae, alias sapiente aut reiciendis iure impedit
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque
+          at ut harum vitae, alias sapiente aut reiciendis iure impedit
           repellendus placeat dolore veniam ea illum deserunt dignissimos ad
           totam.
         </p>
       </section>
     </main>
 
-    <h1>Newsletter</h1>
+    <Newsletter />
   </div>
 </template>
 
