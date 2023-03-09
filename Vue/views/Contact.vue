@@ -1,3 +1,26 @@
+<script>
+export default {
+  name: 'About',
+}
+</script>
+
 <template>
-  <h1>Contact</h1>
+  <div :class="$style.contact" class="container">
+    <main>
+      <h3>Contact Me</h3>
+      <a href="tel:+16158675309">(615) 867-5309</a>
+      <a href="mailto:gordonfreeman@valve.com">gordonfreeman@valve.com</a>
+    </main>
+
+    <h1>Newsletter</h1>
+  </div>
 </template>
+
+<style lang="scss" module>
+.contact {
+  :global(main a) {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+</style>
