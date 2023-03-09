@@ -7,13 +7,32 @@ export default {
       email: '',
     }
   },
+  methods: {
+    submit() {
+      let valid = true
+      entries.forEach((entry) => {
+        // Reset errors
+        toggleError(entry[0], false)
+
+        // If we're missing any values, display the error and mark the form as invalid
+        if (!entry[1]) {
+          valid = false
+          toggleError(entry[0], true)
+        }
+      })
+
+      if (valid) {
+        toggleDialog(true, data)
+      }
+    },
+  },
 }
 </script>
 
 <template>
   <aside>
     <h3>Sign Up For Our Newsletter</h3>
-    <form :class="$style.submissionForm" @submit="submit">
+    <form :class="$style.submissionForm" @submit.prevent="submit">
       <div class="nameSection">
         <label for="name">Name:</label>
         <input v-model="name" type="text" id="name" name="name" />
