@@ -1,6 +1,9 @@
 <script>
 export default {
   name: 'Header',
+  mounted() {
+    console.log(this.$router.getRoutes())
+  },
   methods: {
     isCurrentPage(val) {
       // If $route.name is undefined, then we're on the home page

@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
-import createRouter from './routes/router'
+import router from './router'
 import App from './App.vue'
 import './scss/main.scss'
 
 const app = createApp(App)
-app.use(createRouter)
+app.use(router)
 app.mount('#root')
