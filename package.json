@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "vite": "vite -c ./vite.config.js",
-    "start-html": "npm run vite ./HTML",
-    "start-css": "npm run vite ./CSS",
-    "start-sass": "npm run vite ./SASS",
-    "start-js": "npm run vite ./JavaScript",
-    "start-vue": "npm run vite ./Vue",
+    "html": "npm run vite ./HTML",
+    "css": "npm run vite ./CSS",
+    "sass": "npm run vite ./SASS",
+    "js": "npm run vite ./JavaScript",
+    "vue": "npm run vite ./Vue",
     "build": "npm run vite build",
     "preview": "npm run vite preview",
     "prepare": "husky install"
