@@ -1,17 +1,21 @@
 <script>
 export default {
   name: 'Header',
-  mounted() {
-    console.log(this.$router.getRoutes())
+  computed: {
+    links() {
+      return this.$router
+        .getRoutes()
+        .filter(({ name }) => name !== 'not-found')
+        .map(({ name }) => ({
+          name,
+          text: `${name[0].toUpperCase()}${name.slice(1)}`,
+          class:
+            this.$route.name === name || (!this.$route.name && name === 'home')
+              ? 'disabled'
+              : '',
+        }))
+    },
   },
-  methods: {
-    isCurrentPage(val) {
-      // If $route.name is undefined, then we're on the home page
-      return this.$route.name === val || !this.$route.name && val === 'home'
-        ? 'disabled'
-        : ''
-    }
-  }
 }
 </script>
 
@@ -21,9 +25,12 @@ export default {
       <router-link :to="{ name: 'home' }">Vue Site</router-link>
     </h2>
     <nav :class="$style.links">
-      <router-link :to="{ name: 'home' }" :class="isCurrentPage('home')">Home</router-link>
-      <router-link :to="{ name: 'about' }" :class="isCurrentPage('about')">About</router-link>
-      <router-link :to="{ name: 'contact' }" :class="isCurrentPage('contact')">Contact</router-link>
+      <router-link
+        v-for="link in links"
+        :to="{ name: link.name }"
+        :class="link.class"
+        >{{ link.text }}</router-link
+      >
     </nav>
     <div :class="$style.colorBars">
       <div></div>
