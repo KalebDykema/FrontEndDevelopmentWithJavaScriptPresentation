@@ -7,20 +7,8 @@ export default {
   components: {
     Dialog,
   },
-  computed: {
-    openDialogComp: {
-      get() {
-        return this.openDialog
-      },
-      set(val) {
-        console.log(val)
-        this.openDialog = val
-      }
-    },
-  },
   data() {
     return {
-      openDialog: true,
       values: {
         name: {
           value: '',
@@ -33,6 +21,7 @@ export default {
           type: 'email',
         },
       },
+      openDialog: false,
     }
   },
   methods: {
@@ -42,12 +31,10 @@ export default {
       value.error = value.value ? false : true
     },
     submit() {
-      if (!this.name.error && !this.email.error) {
-        // toggleDialog(true, data)
-      }
+      if (Object.values(this.values).some(({error}) => error)) return
+      this.openDialog = true
     },
     upperCaseFirst,
-    
   },
 }
 </script>
@@ -74,7 +61,7 @@ export default {
     </form>
   </aside>
 
-  <Dialog :open.sync="openDialogComp">Test</Dialog>
+  <Dialog v-model:open="openDialog">Test</Dialog>
 </template>
 
 <style lang="scss" module>

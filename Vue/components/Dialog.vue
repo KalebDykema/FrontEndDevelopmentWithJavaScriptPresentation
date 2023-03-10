@@ -6,19 +6,9 @@ export default {
       type: Boolean,
     }
   },
-  watch: {
-    // open: {
-    //   immediate: true,
-    //   handler() {
-    //     console.log(this.open)
-    //   }
-    // }
-  },
   methods: {
     close() {
-      // console.log(this.open)
       this.$emit('update:open', false)
-      // console.log(this.open)
     }
   }
 }
@@ -46,6 +36,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 
   :global dialog {
     position: relative;
