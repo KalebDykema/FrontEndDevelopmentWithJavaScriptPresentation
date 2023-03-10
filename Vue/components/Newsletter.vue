@@ -65,7 +65,9 @@ export default {
     </form>
   </aside>
 
-  <Dialog v-model:open="openDialog">Test</Dialog>
+  <Dialog v-model:open="openDialog">
+    Thank you {{ name }} for signing up! We'll email you newsletters and updates at {{ email }}.
+  </Dialog>
 </template>
 
 <style lang="scss" module>
