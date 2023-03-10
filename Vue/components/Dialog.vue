@@ -17,7 +17,7 @@ export default {
 <template>
   <div v-if="open" :class="$style.dialogContainer" @click="close">
     <!-- The @click.stop is to prevent propagation. Removing it will now allow users to close the dialog by just clicking on it -->
-    <dialog :open="open" @click.stop="">
+    <dialog :open="open" @click.stop>
       <p><slot /></p>
       <button @click="close">&cross;</button>
     </dialog>
