@@ -24,6 +24,14 @@ export default {
       openDialog: false,
     }
   },
+  computed: {
+    name() {
+      return this.values.name.value
+    },
+    email() {
+      return this.values.email.value
+    },
+  },
   methods: {
     submit() {
       let invalid = false
