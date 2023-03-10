@@ -3,25 +3,40 @@ export default {
   name: 'Newsletter',
   data() {
     return {
-      name: '',
-      email: '',
+      name: {
+        value: '',
+        error: false,
+      },
+      email: {
+        value: '',
+        error: false,
+      },
     }
+  },
+  computed: {
+    nameValue: {
+      get() {
+        return this.name.value
+      },
+      set(val) {
+        if (!val) this.name.error = true
+        this.name.value = val
+      },
+    },
+    emailValue: {
+      get() {
+        return this.email.value
+      },
+      set(val) {
+        console.log(val)
+        if (!val) this.email.error = true
+        this.email.value = val
+      },
+    },
   },
   methods: {
     submit() {
-      let valid = true
-      entries.forEach((entry) => {
-        // Reset errors
-        toggleError(entry[0], false)
-
-        // If we're missing any values, display the error and mark the form as invalid
-        if (!entry[1]) {
-          valid = false
-          toggleError(entry[0], true)
-        }
-      })
-
-      if (valid) {
+      if (!this.name.error && !this.email.error) {
         toggleDialog(true, data)
       }
     },
@@ -35,14 +50,19 @@ export default {
     <form :class="$style.submissionForm" @submit.prevent="submit">
       <div class="nameSection">
         <label for="name">Name:</label>
-        <input v-model="name" type="text" id="name" name="name" />
-        <p class="error invisible">Name is required</p>
+        <input v-model="nameValue" type="text" id="name" name="name" />
+        <p v-if="name.error" class="error">Name is required</p>
       </div>
 
       <div class="emailSection">
         <label for="email">email</label>
-        <input v-model="email" type="email" id="email" name="email" />
-        <p class="error invisible">Email is required</p>
+        <input
+          v-model="emailValue"
+          type="email"
+          id="email"
+          name="email"
+        />
+        <p v-if="email.error" class="error">Email is required</p>
       </div>
 
       <input type="submit" value="Submit" class="submitBtn" />
