@@ -74,7 +74,8 @@ export default {
   </aside>
 
   <Dialog v-model:open="openDialog">
-    Thank you {{ name }} for signing up! We'll email you newsletters and updates at {{ email }}.
+    Thank you {{ name }} for signing up! We'll email you newsletters and updates
+    at {{ email }}.
   </Dialog>
 </template>
 
