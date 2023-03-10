@@ -4,20 +4,20 @@ export default {
   props: {
     open: {
       type: Boolean,
-    }
+    },
   },
   methods: {
     close() {
       this.$emit('update:open', false)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <template>
   <div v-if="open" :class="$style.dialogContainer" @click="close">
     <dialog :open="open">
-      <p><slot/></p>
+      <p><slot /></p>
       <button @click="close">&cross;</button>
     </dialog>
   </div>
