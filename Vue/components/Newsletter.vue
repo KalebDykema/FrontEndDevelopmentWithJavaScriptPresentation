@@ -19,26 +19,6 @@ export default {
       },
     }
   },
-  computed: {
-    // nameValue: {
-    //   get() {
-    //     return this.name.value
-    //   },
-    //   set(val) {
-    //     if (!val) this.name.error = true
-    //     this.name.value = val
-    //   },
-    // },
-    // emailValue: {
-    //   get() {
-    //     return this.email.value
-    //   },
-    //   set(val) {
-    //     if (!val) this.email.error = true
-    //     this.email.value = val
-    //   },
-    // },
-  },
   methods: {
     setValue(property, { target }) {
       const value = this.values[property]
