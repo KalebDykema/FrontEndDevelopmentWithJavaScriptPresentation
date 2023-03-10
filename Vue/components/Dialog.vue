@@ -6,6 +6,11 @@ export default {
       type: Boolean,
     },
   },
+  mounted() {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') this.close()
+    })
+  },
   methods: {
     close() {
       this.$emit('update:open', false)
