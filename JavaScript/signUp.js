@@ -1,6 +1,6 @@
 // DOM Elements
 const form = document.querySelector('form')
-const dialogContainer = document.querySelector('.dialog-container')
+const dialogContainer = document.querySelector('.dialogContainer')
 const dialog = dialogContainer.querySelector('dialog')
 const dialogCloseBtn = dialog.querySelector('button')
 

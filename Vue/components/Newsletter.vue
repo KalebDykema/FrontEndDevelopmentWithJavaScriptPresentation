@@ -1,10 +1,26 @@
 <script>
 import { upperCaseFirst } from '../helpers'
+import Dialog from './Dialog.vue'
 
 export default {
   name: 'Newsletter',
+  components: {
+    Dialog,
+  },
+  computed: {
+    openDialogComp: {
+      get() {
+        return this.openDialog
+      },
+      set(val) {
+        console.log(val)
+        this.openDialog = val
+      }
+    },
+  },
   data() {
     return {
+      openDialog: true,
       values: {
         name: {
           value: '',
@@ -31,6 +47,7 @@ export default {
       }
     },
     upperCaseFirst,
+    
   },
 }
 </script>
@@ -56,6 +73,8 @@ export default {
       <input type="submit" value="Submit" class="submitBtn" />
     </form>
   </aside>
+
+  <Dialog :open.sync="openDialogComp">Test</Dialog>
 </template>
 
 <style lang="scss" module>

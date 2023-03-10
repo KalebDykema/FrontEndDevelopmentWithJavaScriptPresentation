@@ -1,14 +1,34 @@
 <script>
 export default {
-  name: 'Dialog'
+  name: 'Dialog',
+  props: {
+    open: {
+      type: Boolean,
+    }
+  },
+  watch: {
+    // open: {
+    //   immediate: true,
+    //   handler() {
+    //     console.log(this.open)
+    //   }
+    // }
+  },
+  methods: {
+    close() {
+      // console.log(this.open)
+      this.$emit('update:open', false)
+      // console.log(this.open)
+    }
+  }
 }
 </script>
 
 <template>
-  <div :class="$style.dialogContainer">
-    <dialog open>
-      <p></p>
-      <button>&cross;</button>
+  <div v-if="open" :class="$style.dialogContainer" @click="close">
+    <dialog :open="open">
+      <p><slot/></p>
+      <button @click="close">&cross;</button>
     </dialog>
   </div>
 </template>
