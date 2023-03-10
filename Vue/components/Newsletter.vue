@@ -1,45 +1,56 @@
 <script>
+import { upperCaseFirst } from '../helpers'
+
 export default {
   name: 'Newsletter',
   data() {
     return {
-      name: {
-        value: '',
-        error: false,
-      },
-      email: {
-        value: '',
-        error: false,
+      values: {
+        name: {
+          value: '',
+          error: false,
+          type: 'text',
+        },
+        email: {
+          value: '',
+          error: false,
+          type: 'email',
+        },
       },
     }
   },
   computed: {
-    nameValue: {
-      get() {
-        return this.name.value
-      },
-      set(val) {
-        if (!val) this.name.error = true
-        this.name.value = val
-      },
-    },
-    emailValue: {
-      get() {
-        return this.email.value
-      },
-      set(val) {
-        console.log(val)
-        if (!val) this.email.error = true
-        this.email.value = val
-      },
-    },
+    // nameValue: {
+    //   get() {
+    //     return this.name.value
+    //   },
+    //   set(val) {
+    //     if (!val) this.name.error = true
+    //     this.name.value = val
+    //   },
+    // },
+    // emailValue: {
+    //   get() {
+    //     return this.email.value
+    //   },
+    //   set(val) {
+    //     if (!val) this.email.error = true
+    //     this.email.value = val
+    //   },
+    // },
   },
   methods: {
+    setValue(property, { target }) {
+      const value = this.values[property]
+      value.value = target.value
+      value.error = value.value ? false : true
+    },
     submit() {
       if (!this.name.error && !this.email.error) {
-        toggleDialog(true, data)
+        // toggleDialog(true, data)
       }
     },
+    upperCaseFirst,
   },
 }
 </script>
@@ -48,21 +59,18 @@ export default {
   <aside>
     <h3>Sign Up For Our Newsletter</h3>
     <form :class="$style.submissionForm" @submit.prevent="submit">
-      <div class="nameSection">
-        <label for="name">Name:</label>
-        <input v-model="nameValue" type="text" id="name" name="name" />
-        <p v-if="name.error" class="error">Name is required</p>
-      </div>
-
-      <div class="emailSection">
-        <label for="email">email</label>
+      <div v-for="(value, property) in values">
+        <label :for="property">{{ upperCaseFirst(property) }}:</label>
         <input
-          v-model="emailValue"
-          type="email"
-          id="email"
-          name="email"
+          :value="value.value"
+          :type="value.type"
+          :id="property"
+          :name="property"
+          @input.trim="setValue(property, $event)"
         />
-        <p v-if="email.error" class="error">Email is required</p>
+        <p v-if="value.error" class="error">
+          {{ upperCaseFirst(property) }} is required
+        </p>
       </div>
 
       <input type="submit" value="Submit" class="submitBtn" />
