@@ -25,13 +25,18 @@ export default {
     }
   },
   methods: {
-    setValue(property, { target }) {
-      const value = this.values[property]
-      value.value = target.value
-      value.error = value.value ? false : true
-    },
     submit() {
-      if (Object.values(this.values).some(({ value }) => !value)) return
+      let invalid = false
+      // Make sure we validate for errors before sumbitting
+      Object.values(this.values).forEach((value) => {
+        if (!value.value) {
+          value.error = true
+          invalid = true
+          return
+        }
+        value.error = false
+      })
+      if (invalid) return
       this.openDialog = true
     },
     upperCaseFirst,
@@ -46,11 +51,10 @@ export default {
       <div v-for="(value, property) in values">
         <label :for="property">{{ upperCaseFirst(property) }}:</label>
         <input
-          :value="value.value"
+          v-model="value.value"
           :type="value.type"
           :id="property"
           :name="property"
-          @input.trim="setValue(property, $event)"
         />
         <p v-if="value.error" class="error">
           {{ upperCaseFirst(property) }} is required
