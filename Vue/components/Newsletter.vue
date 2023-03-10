@@ -31,7 +31,7 @@ export default {
       value.error = value.value ? false : true
     },
     submit() {
-      if (Object.values(this.values).some(({error}) => error)) return
+      if (Object.values(this.values).some(({ value }) => !value)) return
       this.openDialog = true
     },
     upperCaseFirst,
