@@ -7,7 +7,8 @@ This is meant to serve as an example of the same site built using various techno
 - HTML: This is just a barebones site with only HTML, which is used to lay out the structure of a webpage. There's no styling or functionality, so it's essentially just the "skeleton" of a site.
 - CSS: This adds in CSS to the HTML site, which is a language used to add "styles" to a site and make it look pretty. This adds "muscles" to our site, but it still lacks functionality we could get from something like JavaScript. The newsletter sign-up portion is a good example of this, as it does nothing in the CSS site.
 - SASS: Functionality, this is the exact same as the CSS site. Instead of CSS, this uses SASS for styling, which is essentially just CSS with more functionality.
-- JavaScript: This add in JavaScript, which is a programming languages used to add more functionality to a website. A good way to describe it is that it adds the "brain" to a site. In this case, it adds error validation into our newsletter sign-up form, and opens up a dialog to confirm that a user has signed up. It's not actually signing up users for anything, just presenting a simple example of how JavaScript could be used.
+- JavaScript: This add in JavaScript to the SASS site, which is a programming languages used to add more functionality to a website. A good way to describe it is that it adds the "brain" to a site. In this case, it adds error validation into our newsletter sign-up form, and opens up a dialog to confirm that a user has signed up. It's not actually signing up users for anything, just presenting a simple example of how JavaScript could be used.
+- Vue: This takes the JavaScript site and converts it into a site built with Vue. With HTML, CSS (or SASS), and JavaScript, you'll building with raw materials. With Vue, you're building with legos. This is a more modern approach to developing a modern website.
 
 ## Event Details
 
