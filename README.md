@@ -2,7 +2,7 @@
 
 This repository was made as part of a presentation going over a basic roadmap and entry guide to getting started in front end development. [This event](https://www.meetup.com/franklindevs/events/291671064/) occured on March 14, 2023, in Franklin, Tennessee as part of the [Franklin Developer Lunch & Learn](https://www.meetup.com/franklindevs/) group.
 
-This is meant to serve as various examples of the same site built using various technologies to incrementally add more on top of the previous version. All the sites are detailed below.
+This is meant to serve as various examples of the same site built using various technologies to incrementally add more on top of the previous version. If you're a beginner, it's ok to not understand how all of this works. For now, focus on the basics and come back to this once you have a good grasp of some of the fundamentals of front-end development. All the sites are detailed below.
 
 ## Examples Included
 
